@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addedit.add.AddFragment">
+
+    <include
+        android:id="@+id/addEditToolbarLayout"
+        layout="@layout/add_edit_toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addEditToolbarLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/picUrlEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints=""
+                android:hint="@string/profile_picture_url"
+                android:inputType="textUri"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="name"
+                android:hint="@string/first_name"
+                android:inputType="textCapWords"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/middleNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="name"
+                android:hint="@string/middle_name"
+                android:inputType="textCapWords"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="name"
+                android:hint="@string/last_name"
+                android:inputType="textCapWords"
+                android:textSize="20sp" />
+
+            <include
+                layout="@layout/phone_numbers_layout"
+                android:id="@+id/phoneNumbersLayout" />
+
+            <include
+                layout="@layout/social_media_layout"
+                android:id="@+id/socialMediaLayout" />
+
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="text"
+                android:hint="@string/description"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/add"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addLinkFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_baseline_add_link_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/addFab"
+        app:layout_constraintEnd_toEndOf="@+id/addFab"
+        android:contentDescription="@string/add_social_media" />
+
+    <TextView
+        android:id="@+id/addLinkActionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/add_social_media"
+        app:layout_constraintBottom_toBottomOf="@+id/addLinkFab"
+        app:layout_constraintEnd_toStartOf="@+id/addLinkFab"
+        app:layout_constraintTop_toTopOf="@+id/addLinkFab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPhoneFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_baseline_phone_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/addLinkFab"
+        app:layout_constraintEnd_toEndOf="@+id/addLinkFab"
+        app:layout_constraintStart_toStartOf="@+id/addLinkFab"
+        android:contentDescription="@string/add_phone_number" />
+
+    <TextView
+        android:id="@+id/add_person_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/add_phone_number"
+        app:layout_constraintBottom_toBottomOf="@+id/addPhoneFab"
+        app:layout_constraintEnd_toStartOf="@+id/addPhoneFab"
+        app:layout_constraintTop_toTopOf="@+id/addPhoneFab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

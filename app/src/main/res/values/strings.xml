@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Notebook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_profile_picture">Contact profile picture</string>
+    <string name="example_number">88009298923</string>
+    <string name="example_last_name">Harrington</string>
+    <string name="example_first_name">James</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="number">Number</string>
+    <string name="phone_numbers">Phone Numbers</string>
+    <string name="description">Description</string>
+    <string name="social_media">Social Media</string>
+    <string name="add_contact">Add contact</string>
+    <string name="confirm_adding_editing_contact">Confirm adding/editing contact</string>
+    <string name="profile_picture_url">Profile picture URL</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="add">Add</string>
+    <string name="add_social_media">Add Social Media</string>
+    <string name="add_phone_number">Add Phone Number</string>
+    <string name="empty_contacts_message">You don\'t have contacts yet. Start adding by pressing the CONTACT button, or add dummy contacts</string>
+    <string name="dummies">Dummies</string>
+    <string name="contact">Contact</string>
+    <string-array name="sortBy">
+        <item>First Name</item>
+        <item>Last Name</item>
+    </string-array>
+</resources>
