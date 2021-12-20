@@ -146,8 +146,7 @@ class AddFragment : Fragment(), AddEditContract.View {
             ?.map { (it as TextView).text.toString() }?.filter { it.isNotEmpty() },
         binding.socialMediaLayout.socialMediaItemsLayout.children.toList().ifEmpty { null }
             ?.map { (it as TextView).text.toString() }?.filter { it.isNotEmpty() },
-        binding.descriptionEditText.text.toString().ifEmpty { null },
-        id
+        binding.descriptionEditText.text.toString().ifEmpty { null }
     )
 
 

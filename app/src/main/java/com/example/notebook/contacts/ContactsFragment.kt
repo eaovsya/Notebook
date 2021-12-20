@@ -33,20 +33,16 @@ class ContactsFragment : Fragment(), ContactsContract.View, ContactsAdapter.OnIt
             .inject(this)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         sortMode = SortMode.values()[requireActivity().getSharedPreferences(
             SHARED_PREF,
             Context.MODE_PRIVATE
         ).getInt(
             SORT_MODE, DEFAULT_SORT_MODE.ordinal
         )]
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
         _binding = FragmentContactsBinding.inflate(inflater, container, false)
         initView()
         presenter.bindView(this)
@@ -65,6 +61,9 @@ class ContactsFragment : Fragment(), ContactsContract.View, ContactsAdapter.OnIt
         binding.fab.setOnClickListener {
             presenter.onAddContact()
         }
+    }
+
+    override fun initSpinner() {
         val adapter = ArrayAdapter(
             requireContext(),
             R.layout.custom_spinner_item,

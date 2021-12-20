@@ -26,6 +26,7 @@ class ContactsPresenter @Inject constructor(
                     router.openEmpty()
                 } else {
                     view?.showContacts(it)
+                    view?.initSpinner()
                 }
             },
             this::onError,

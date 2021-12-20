@@ -8,6 +8,7 @@ interface ContactsContract {
         fun showMessage(message: String)
         fun onItemDeleted(position: Int)
         fun sortContactsBy(mode: SortMode)
+        fun initSpinner()
     }
 
     interface Presenter {
